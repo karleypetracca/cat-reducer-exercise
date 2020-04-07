@@ -10,7 +10,7 @@ const initialState = {
 	activity: "napping",
 };
 
-activityReducer = (state = initialState, action) => {
+const activityReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ACTION_NAP: {
 			return {
