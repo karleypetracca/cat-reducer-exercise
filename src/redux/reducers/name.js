@@ -8,9 +8,11 @@ const initialState = {
 const nameReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ACTION_SET_NAME: {
+			console.log(state);
+			console.log(action);
 			return {
 				...state,
-				name: action,
+				name: action.payload.name,
 			};
 		}
 		default:

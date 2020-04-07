@@ -1,19 +1,38 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setName } from "../redux/actions";
 
-const Name = ({ name, setName }) => {
-	return (
-		<>
-			<h1>The cat's name is {name}:</h1>
-			<input type="text" onChange={(name) => setName()} />
-		</>
-	);
-};
+class Name extends Component {
+	state = {
+		textInput: "",
+	};
 
-const mapStateToProps = (state) => {
-	const { name } = state;
-	return name;
-};
+	handleChange = (e) => {
+		this.setState({
+			textInput: e.target.value,
+		});
+	};
 
-export default connect(mapStateToProps, { setName })(Name);
+	handleSubmit = (e) => {
+		e.preventDefault();
+		this.props.setName(this.state.textInput);
+	};
+
+	render() {
+		return (
+			<>
+				<h1>What is the cat's name?</h1>
+				<form onSubmit={this.handleSubmit}>
+					<input
+						type="text"
+						onChange={this.handleChange}
+						placeholder="New name"
+					/>
+					<button type="submit">Submit</button>
+				</form>
+			</>
+		);
+	}
+}
+
+export default connect(null, { setName })(Name);
