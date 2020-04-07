@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { nap, eat, play, murder } from "../redux/actions";
 
-const Activity = ({ activity, nap, eat, play, murder }) => (
+const Activity = ({ activity, nap, eat, play, murder, setName }) => (
 	<>
 		<h1>What is the cat doing?</h1>
 		<p>The cat is...{activity}</p>

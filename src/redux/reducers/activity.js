@@ -4,6 +4,7 @@ import {
 	ACTION_EAT,
 	ACTION_PLAY,
 	ACTION_MURDER,
+	ACTION_SET_ACTIVITY,
 } from "../actionTypes";
 
 const initialState = {
