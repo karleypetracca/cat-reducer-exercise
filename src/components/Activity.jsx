@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setActivity, setName } from "../redux/actions";
+import { setActivity } from "../redux/actions";
 
-const Activity = ({ activity, name, setActivity, setName }) => (
+const Activity = ({ activity, name, setActivity }) => (
 	<>
 		<h1>What is the cat doing?</h1>
 		<p>
@@ -19,4 +19,4 @@ const mapStateToProps = (state) => {
 	return activity;
 };
 
-export default connect(mapStateToProps, { setActivity, setName })(Activity);
+export default connect(mapStateToProps, { setActivity })(Activity);
