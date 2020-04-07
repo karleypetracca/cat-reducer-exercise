@@ -10,7 +10,7 @@ const nameReducer = (state = initialState, action) => {
 		case ACTION_SET_NAME: {
 			return {
 				...state,
-				name: "Something",
+				name: action,
 			};
 		}
 		default:
