@@ -6,14 +6,14 @@ import Name from "./Name";
 
 const Activity = ({ activity, name, setActivity }) => (
 	<>
-		<Name />
 		<h1>What is the cat doing?</h1>
-		<p>
-			{name} is...{activity}
-		</p>
+		<Name />
 		<button onClick={() => setActivity("napping")}>Napping</button>
 		<button onClick={() => setActivity("eating")}>Eating</button>
 		<button onClick={() => setActivity("playing")}>Playing</button>
+		<h2>
+			{name} is {activity}!
+		</h2>
 	</>
 );
 

@@ -17,9 +17,8 @@ const Name = ({ setName }) => {
 
 	return (
 		<>
-			<h1>What is the cat's name?</h1>
 			<form onSubmit={handleSubmit}>
-				<input type="text" onChange={handleChange} placeholder="New name" />
+				<input type="text" onChange={handleChange} placeholder="Name of cat" />
 				<button type="submit">Submit</button>
 			</form>
 		</>
